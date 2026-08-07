@@ -1,3 +1,4 @@
+# Laravel & Lumen
 *.log
 .DS_Store
 .env
@@ -38,3 +39,4 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 /database/database.sqlite
+/bootstrap/cache/*.php
