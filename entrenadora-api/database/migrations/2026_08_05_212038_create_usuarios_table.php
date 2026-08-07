@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+{
+    Schema::create('usuario', function (Blueprint $table) {
+        // id() en Laravel genera un BIGINT UNSIGNED, ideal para llaves primarias
+        $table->id('id_usuario'); 
+        $table->string('nombre', 100);
+        $table->string('correo', 100)->unique();
+        $table->string('contrasenia', 255);
+        $table->text('extra');
+        $table->date('fecha_vencimiento');
+        
+        // llave foránea de nivel_membresia
+        $table->unsignedBigInteger('id_nivel'); 
+        $table->foreign('id_nivel')->references('id_nivel')->on('nivel_membresia');
+    });
+}
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('usuarios');
+    }
+};

@@ -1,0 +1,19 @@
+BD:
+	PostgreSQL
+
+HOST/API:
+	Render
+	Railway
+	Fly.io
+
+FRONTEND:
+	Vercel
+	Netlify
+
+ALMACENAMIENTO (videos):
+	Vimeo
+	YouTube
+
+LENGUAJE / FRAMEWORK:
+	C# (.NET Core)
+	PHP (Laravel)
